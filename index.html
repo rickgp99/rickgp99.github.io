@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechSolutions - Soluções em TI</title>
+  <style>
+    /* Reset básico */
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+
+    body { background-color: #f4f4f4; color: #333; line-height: 1.6; }
+
+    header {
+      background-color: #007BFF;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section { padding: 60px 20px; max-width: 1000px; margin: auto; }
+
+    h1, h2 { margin-bottom: 20px; }
+
+    .services {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .service-card {
+      background-color: #fff;
+      padding: 20px;
+      flex: 1 1 250px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #333;
+      color: #fff;
+    }
+
+    @media (max-width: 768px) {
+      .services { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>TechSolutions</h1>
+    <nav>
+      <a href="#sobre">Sobre</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <section id="sobre">
+    <h2>Sobre Nós</h2>
+    <p>A TechSolutions oferece soluções completas em tecnologia da informação, incluindo desenvolvimento de software, consultoria em TI e suporte técnico de alta qualidade.</p>
+  </section>
+
+  <section id="servicos">
+    <h2>Nossos Serviços</h2>
+    <div class="services">
+      <div class="service-card">
+        <h3>Desenvolvimento Web</h3>
+        <p>Criamos websites modernos, responsivos e otimizados para performance e SEO.</p>
+      </div>
+      <div class="service-card">
+        <h3>Consultoria em TI</h3>
+        <p>Oferecemos soluções estratégicas para otimizar processos e reduzir custos.</p>
+      </div>
+      <div class="service-card">
+        <h3>Suporte Técnico</h3>
+        <p>Atendimento rápido e eficaz para problemas de hardware, software e redes.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato">
+    <h2>Contato</h2>
+    <p>Email: contato@techsolutions.com</p>
+    <p>Telefone: (11) 1234-5678</p>
+    <p>Endereço: Rua da Tecnologia, 123, São Paulo - SP</p>
+  </section>
+
+  <footer>
+    &copy; 2025 TechSolutions. Todos os direitos reservados.
+  </footer>
+
+</body>
+</html>
