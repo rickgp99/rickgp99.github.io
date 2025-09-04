@@ -8,103 +8,199 @@
     /* Reset básico */
     * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
 
-    body { background-color: #f4f4f4; color: #333; line-height: 1.6; }
+    body { line-height: 1.6; color: #333; background-color: #f4f4f4; }
 
+    /* Header */
     header {
-      background-color: #007BFF;
+      background: linear-gradient(90deg, #007BFF, #00C6FF);
       color: #fff;
-      padding: 20px 0;
+      padding: 100px 20px 60px;
       text-align: center;
     }
 
+    header h1 { font-size: 3em; margin-bottom: 10px; }
+    header p { font-size: 1.2em; margin-bottom: 20px; }
+    .btn { 
+      display: inline-block; 
+      padding: 12px 30px; 
+      background-color: #fff; 
+      color: #007BFF; 
+      border-radius: 25px; 
+      font-weight: bold; 
+      text-decoration: none; 
+      transition: 0.3s;
+    }
+    .btn:hover { background-color: #e6e6e6; }
+
+    /* Navigation */
+    nav { margin-top: 20px; }
     nav a {
-      color: #fff;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
+      color: #fff; 
+      margin: 0 15px; 
+      text-decoration: none; 
+      font-weight: bold; 
     }
+    nav a:hover { text-decoration: underline; }
 
-    nav a:hover {
-      text-decoration: underline;
-    }
+    section { padding: 80px 20px; max-width: 1100px; margin: auto; }
 
-    section { padding: 60px 20px; max-width: 1000px; margin: auto; }
+    h2 { font-size: 2em; margin-bottom: 30px; text-align: center; }
 
-    h1, h2 { margin-bottom: 20px; }
+    /* Sobre nós */
+    #sobre p { max-width: 800px; margin: auto; text-align: center; }
 
+    /* Serviços */
     .services {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
+      display: flex; 
+      flex-wrap: wrap; 
+      gap: 30px; 
       justify-content: center;
     }
-
     .service-card {
       background-color: #fff;
-      padding: 20px;
-      flex: 1 1 250px;
-      border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      padding: 30px;
+      flex: 1 1 280px;
+      border-radius: 10px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
       text-align: center;
+      transition: transform 0.3s;
     }
+    .service-card:hover { transform: translateY(-10px); }
 
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #333;
+    /* Portfólio */
+    .portfolio {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .portfolio img {
+      width: 100%;
+      border-radius: 10px;
+      transition: transform 0.3s;
+    }
+    .portfolio img:hover { transform: scale(1.05); }
+
+    /* Depoimentos */
+    .testimonials { display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; }
+    .testimonial {
+      background-color: #007BFF;
       color: #fff;
+      padding: 25px;
+      border-radius: 10px;
+      flex: 1 1 250px;
+      text-align: center;
+      transition: transform 0.3s;
     }
+    .testimonial:hover { transform: scale(1.05); }
 
+    /* Contato */
+    #contato form { max-width: 600px; margin: auto; display: flex; flex-direction: column; gap: 15px; }
+    #contato input, #contato textarea { padding: 12px; border-radius: 5px; border: 1px solid #ccc; width: 100%; }
+    #contato button { padding: 12px; background-color: #007BFF; color: #fff; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; }
+    #contato button:hover { background-color: #0056b3; }
+
+    /* Footer */
+    footer { text-align: center; padding: 30px; background-color: #333; color: #fff; margin-top: 50px; }
+
+    /* Responsivo */
     @media (max-width: 768px) {
-      .services { flex-direction: column; }
+      .services, .testimonials { flex-direction: column; }
     }
   </style>
 </head>
 <body>
 
+  <!-- Header -->
   <header>
     <h1>TechSolutions</h1>
+    <p>Soluções completas em tecnologia da informação</p>
+    <a href="#contato" class="btn">Entre em Contato</a>
     <nav>
       <a href="#sobre">Sobre</a>
       <a href="#servicos">Serviços</a>
+      <a href="#portfolio">Portfólio</a>
+      <a href="#depoimentos">Depoimentos</a>
       <a href="#contato">Contato</a>
     </nav>
   </header>
 
+  <!-- Sobre nós -->
   <section id="sobre">
     <h2>Sobre Nós</h2>
-    <p>A TechSolutions oferece soluções completas em tecnologia da informação, incluindo desenvolvimento de software, consultoria em TI e suporte técnico de alta qualidade.</p>
+    <p>A TechSolutions oferece soluções completas em TI, incluindo desenvolvimento de software, consultoria e suporte técnico. Nossa missão é transformar tecnologia em resultados reais para nossos clientes.</p>
   </section>
 
+  <!-- Serviços -->
   <section id="servicos">
     <h2>Nossos Serviços</h2>
     <div class="services">
       <div class="service-card">
         <h3>Desenvolvimento Web</h3>
-        <p>Criamos websites modernos, responsivos e otimizados para performance e SEO.</p>
+        <p>Websites modernos, responsivos e otimizados para SEO e performance.</p>
       </div>
       <div class="service-card">
         <h3>Consultoria em TI</h3>
-        <p>Oferecemos soluções estratégicas para otimizar processos e reduzir custos.</p>
+        <p>Estratégias para otimizar processos, reduzir custos e melhorar a infraestrutura tecnológica.</p>
       </div>
       <div class="service-card">
         <h3>Suporte Técnico</h3>
         <p>Atendimento rápido e eficaz para problemas de hardware, software e redes.</p>
       </div>
+      <div class="service-card">
+        <h3>Segurança da Informação</h3>
+        <p>Proteção de dados e auditoria de sistemas para garantir a segurança da sua empresa.</p>
+      </div>
     </div>
   </section>
 
-  <section id="contato">
-    <h2>Contato</h2>
-    <p>Email: contato@techsolutions.com</p>
-    <p>Telefone: (11) 1234-5678</p>
-    <p>Endereço: Av. Braz Leme, 3029 - Santana, São Paulo - SP, 02022-011</p>
+  <!-- Portfólio -->
+  <section id="portfolio">
+    <h2>Portfólio</h2>
+    <div class="portfolio">
+      <img src="https://via.placeholder.com/300x200.png?text=Projeto+1" alt="Projeto 1">
+      <img src="https://via.placeholder.com/300x200.png?text=Projeto+2" alt="Projeto 2">
+      <img src="https://via.placeholder.com/300x200.png?text=Projeto+3" alt="Projeto 3">
+      <img src="https://via.placeholder.com/300x200.png?text=Projeto+4" alt="Projeto 4">
+    </div>
   </section>
 
+  <!-- Depoimentos -->
+  <section id="depoimentos">
+    <h2>Depoimentos</h2>
+    <div class="testimonials">
+      <div class="testimonial">
+        <p>"A TechSolutions transformou nosso sistema interno e aumentou nossa produtividade!"</p>
+        <strong>- Cliente A</strong>
+      </div>
+      <div class="testimonial">
+        <p>"Suporte rápido e eficiente. Recomendo a TechSolutions para qualquer empresa."</p>
+        <strong>- Cliente B</strong>
+      </div>
+      <div class="testimonial">
+        <p>"Equipe altamente qualificada, soluções inteligentes e modernas."</p>
+        <strong>- Cliente C</strong>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section id="contato">
+    <h2>Contato</h2>
+    <form action="#" method="post">
+      <input type="text" name="nome" placeholder="Seu Nome" required>
+      <input type="email" name="email" placeholder="Seu Email" required>
+      <textarea name="mensagem" rows="5" placeholder="Sua Mensagem" required></textarea>
+      <button type="submit">Enviar Mensagem</button>
+    </form>
+    <p style="text-align:center; margin-top:20px;">
+      Email: contato@techsolutions.com | Telefone: (11) 1234-5678
+    </p>
+  </section>
+
+  <!-- Footer -->
   <footer>
     &copy; 2025 TechSolutions. Todos os direitos reservados.
   </footer>
 
 </body>
 </html>
-
